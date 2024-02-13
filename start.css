@@ -1,0 +1,168 @@
+/*  Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(210, 4%, 9%, 1);
+
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ede4e4; /* Adjust as needed */
+    color: #000; /* Adjust as needed */
+    border: 2px solid #000; /* Adjust as needed */
+    cursor: pointer;
+}
+.btn-login{
+    width: 150px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff; /* Adjust as needed */
+    color: #000; /* Adjust as needed */
+    border: 2px solid #000; /* Adjust as needed */
+    cursor: pointer;
+
+}
+
+.btn-login:hover {
+    background-color: #5c2d2d; /* Darker green color on hover, adjust as needed */
+    border-color: #45a049; /* Darker border color on hover, adjust as needed */
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    justify-content: center;
+    z-index: 2;
+}
+
+.logo img {
+    height: 70px;
+}
+
+
+.title {
+
+    position: absolute;
+    top: 20%;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    z-index: 2;
+}
+
+.title-text {
+
+    position: absolute;
+    top: 25%;
+    color: white;
+    font-size: 27px;
+    font-weight: 300;
+    margin-top: 10px;
+    z-index: 2;
+
+}
+
+.container1 {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 20px;
+    z-index: 1;
+}
+
+.container1 .form {
+    width: 100%;
+    padding: 30px;
+    background-color: #edecec;
+}
+
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.form .button {
+    margin: 15px 0;
+
+}
+
+.form .button input {
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: black;
+    cursor: pointer;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.button:hover {
+    transform: scale(1.07);
+}
+
+.image-icon {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.bck-icon-1 {
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.bck-icon-2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}

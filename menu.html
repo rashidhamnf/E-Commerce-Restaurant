@@ -1,0 +1,525 @@
+<!DOCTYPE html>															              
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+ <style>
+    /* Add your styling here */
+    body {
+      font-family: 'Arial', sans-serif;
+    
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      
+      color: #fff;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    #filter-options {
+      text-align: center;
+    }
+
+    #product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .product-item {
+      width: 300px;
+      margin: 20px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+
+    .product-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .details-btn {
+      display: block;
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .details-btn:hover {
+      background-color: #555;
+    }
+
+    .details-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .customization-options {
+      margin-top: 20px;
+    }
+
+    .add-to-cart-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #555;
+    }
+
+    #cart {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-bottom-left-radius: 8px;
+      cursor: pointer;
+    }
+
+    #cart-content {
+      position: fixed;
+      top: 40px;
+      right: 10px;
+      max-width: 300px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .remove-item-btn {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .remove-item-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+    <div class="py-1 bg-black top">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+ 1235 2355 98</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">fathimarashidha135@email.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><span>Open hours:</span> <span>Monday - Sunday</span> <span>8:00AM - 9:00PM</span></p>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Rashi</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item cta"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item cta"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item active"><a href="menu.html" class="nav-link">Menu</a></li>
+	        	
+	          <li class="nav-item cta"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta"><a href="reservation.html" class="nav-link">Book a table</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url(https://img.freepik.com/premium-photo/black-concrete-background-top-view-copy-space-generative-ai_788160-3331.jpg);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate text-center mb-4">
+            <h1 class="mb-2 bread"><u><i>Menu</i></u></h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Menu <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<h1>Product Catalog</h1>
+
+  <section id="filter-options">
+    <label>Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="food">Food</option>
+      <option value="drinks">Drinks</option>
+    </select>
+
+    <label>Sort by Popularity:</label>
+    <select id="popularitySort" onchange="sortProducts()">
+      <option value="default">Default</option>
+      <option value="popularity">Popularity</option>
+    </select>
+  </section>
+
+  <section id="product-list">
+    <!-- Product items will be dynamically added here using JavaScript -->
+  </section>
+
+  <section id="product-details" style="display: none;">
+    <!-- Product details will be dynamically added here using JavaScript -->
+  </section>
+
+  <section id="shopping-cart">
+    <div id="cart" onclick="toggleCart()">Cart</div>
+    <div id="cart-content">
+      <h3>Shopping Cart</h3>
+      <div id="cart-items">
+        <!-- Cart items will be dynamically added here using JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const products = [
+      { id: 1, name: 'Pizza', category: 'food', popularity: 5, description: 'Delicious pizza with various toppings.a flat, open-faced baked pie of Italian origin, consisting of a thin layer of bread dough topped with spiced tomato sauce and cheese, often garnished with anchovies, sausage slices, mushrooms', image: 'https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza-500x500.jpg', price: 500 },
+      { id: 2, name: 'Coffee', category: 'drinks', popularity: 5, description: 'Hot and energizing coffee.very healthy for health.Coffee is one of the three most popular beverages in the world (alongside water and tea) and one of the most profitable international commodities.and very delicious sweet, bitter and acidic notes all work pleasantly together.', image: 'https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg', price: 400 },
+
+
+
+ { id: 3, name: 'Avacado Taost', category: 'food', popularity: 5, description: 'open sandwich consisting of toast with mashed avocado, and any of a variety of spices and flavorful ingredients.Avocado toast is a type of open sandwich consisting of toast with mashed avocado, and any of a variety of spices and flavorful ingredients.', image: 'https://www.madhuseverydayindian.com/wp-content/uploads/2021/01/avocado-toast-6-ways.jpg', price: 300 },
+      { id: 4, name: 'Matcha lattes', category: 'drinks', popularity: 5, description: 'matcha powder (made from the finely-ground leaves of certain green tea plants), water, and milk.Matcha latte is a beverage that originates from Japan. . ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPrZw18MjOlbMM8tSiv-7CTXlyoUydGPPaVg&usqp=CAU', price: 550 },
+
+
+  { id: 5, name: 'Pasta', category: 'food', popularity: 5, description: 'type of food made from a mixture of flour, eggs, and water that is formed into different shapes and then boiled. rolled out and cut into various shapes. Pasta is cooked in water and served with a sauce.very delicious.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_BeYsDx9HD-tgkBNDNgjKwi144I9Jju4_Gw&usqp=CAU', price: 400},
+      { id: 6, name: 'Kombucha', category: 'drinks', popularity: 5, description: 'a fizzy sweet-and-sour drink made with tea.Kombucha tea is a fermented drink made with tea, sugar, bacteria and yeast. To make the drink, bacteria and yeast must first grow together to form a culture. The culture is added to the sugar and tea. Then the mix is allowed to ferment.', image: 'https://images.everydayhealth.com/images/diet-nutrition/what-is-kombucha-nutrition-facts-health-benefits-how-to-make-it-rm-alt-722x406.jpg', price: 299 },
+
+ { id:7 , name: 'Sushi Burritos', category: 'food', popularity: 5, description: 'olling sushi ingredients such as fish and vegetables .The sushi burrito or sushirrito is a type of Japanese-American fusion cuisine. It is typically prepared by rolling sushi ingredients such as fish and vegetables in a wrap and serving like a burrito.', image: 'https://www.afarmgirlsdabbles.com/wp-content/uploads/2023/02/Sushi-Burrito-43705s-afarmgirlsdabbles.jpg', price: 600},
+      { id: 8, name: 'Smoothies', category: 'drinks', popularity: 5, description: 'thick beverage made by mixing fruits, vegetables, and other ingredients in a blender. .', image: 'https://thebigmansworld.com/wp-content/uploads/2021/12/low-calorie-smoothies2.jpg', price: 490 },
+
+  { id:9 , name: 'Acoi Bowls', category: 'food', popularity: 5, description: 'thick smoothie bowls loaded with toppings .They are made of pulped and flash-frozen acai berries that are pureed with other frozen fruit then served in a bowl and topped with a variety of fresh fruit, granola, seeds, nuts, peanut butter, etc.', image: 'https://img.huffingtonpost.com/asset/57321d1413000029003812d9.jpeg?ops=scalefit_960_noupscale', price: 600},
+      { id: 10, name: 'Fruit infused water', category: 'drinks', popularity: 5, description: 'water that is infused with fresh citrus fruits, vegetables, and herbs.Many find it much easier to drink more water throughout the day when it tastes like infused fruitMany find it much easier to drink more water throughout the day when it tastes like infused fruit..', image: 'https://i.ndtvimg.com/i/2018-04/flavoured-water-650_650x400_41522836210.jpg?ver-20231203.06', price: 490 },
+
+{ id:11 , name: 'Quino Bowls', category: 'food', popularity: 5, description: ' very delicious vegetables..', image: 'https://www.acouplecooks.com/wp-content/uploads/2022/02/Power-Bowl-005.jpg', price: 600},
+      { id: 12, name: 'Coconut water', category: 'drinks', popularity: 5, description: 'the clear liquid found inside immature coconuts.suit for hot climate.Coconut water is rich in carbohydrates and electrolytes such as potassium, sodium, and magnesium.', image: 'https://coconuthandbook.tetrapak.com/sites/tetrapak-cph/files/styles/chapter_image/public/chapter/images/chap7_1.jpg?itok=qjf5kXbN', price: 490 },
+ 
+
+{ id:12 , name: 'Laksa', category: 'food', popularity: 5, description: 'a dish of rice noodles in curry or hot soup .', image: 'https://i0.wp.com/static.flickr.com/26/63871364_625f0d352e.jpg', price: 450},
+      { id: 13, name: 'vegetable juice', category: 'drinks', popularity: 5, description: 'a dietary supplement made from a blend of vegetables, such as carrots, celery, beets.It is a concentrated form of vegetable nutrition, providing vitamins, minerals, and other nutrients It is a concentrated form of vegetable nutrition, providing vitamins, minerals, and other nutrients..', image: 'https://i.ndtvimg.com/i/2018-04/veggie-juice_620x350_81523005383.jpg', price: 490 },
+ 
+{ id:14 , name: 'Tacos', category: 'food', popularity: 5, description: 'combining seasoned meat, vegetables, and other fillings .aco, an internationally popular hand-sized food item of Mexican origin combining seasoned meat, vegetables, and other fillings and served inside a folded or rolled corn or flour tortill', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzCH-93JMzrzu9OMHX_KQuS9CuB8awbQ8-Yg&usqp=CAU', price: 550},
+      { id: 15, name: 'sparkling water', category: 'drinks', popularity: 5, description: 'water that has carbon dioxide bubbles in it.Sparkling water, also known as “seltzer water” or “carbonated water,” is water that has carbon dioxide bubbles in it. This gas may be natural or it may be infused into still water.', image: 'https://static.toiimg.com/photo/84647497.cms', price: 490 },
+
+{ id:16 , name: 'Burgers', category: 'food', popularity: 5, description: ' delicious tasty..', image: 'https://prairiemeats.ca/wp-content/uploads/2019/12/Burger-Stock.jpg', price: 750},
+      { id: 17, name: 'Teas', category: 'drinks', popularity: 5, description: 'an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Tea_in_different_grade_of_fermentation.jpg/220px-Tea_in_different_grade_of_fermentation.jpg', price: 490 },
+
+{ id:18 , name: 'Fries', category: 'food', popularity: 5, description: 'cutting potatoes into even strips, drying them, and frying them, usually in a deep fryer .', image: 'https://www.healthifyme.com/blog/wp-content/uploads/2022/07/shutterstock_1927479248-1-1024x683.jpg', price: 150},
+      { id: 19, name: 'Milk', category: 'drinks', popularity: 5, description: 'emulsion of fat and protein in water, along with dissolved sugar ', image: 'https://images.cnbctv18.com/wp-content/uploads/2022/04/Milk-1019x573.jpg?im=FitAndFill,width=1200,height=900', price: 200 },
+
+
+
+      // Add more products as needed
+    ];
+
+    const cart = [];
+
+    function renderProducts(products) {
+      const productList = document.getElementById('product-list');
+      productList.innerHTML = '';
+
+      products.forEach(product => {
+        const productItem = document.createElement('div');
+        productItem.classList.add('product-item');
+        productItem.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p>$${product.price}</p>
+          <a href="#" class="details-btn" onclick="showProductDetails(${product.id})">View Details</a>
+        `;
+        productList.appendChild(productItem);
+      });
+    }
+
+    function filterProducts() {
+      const categoryFilter = document.getElementById('categoryFilter');
+      const selectedCategory = categoryFilter.value;
+
+      const filteredProducts = selectedCategory === 'all'
+        ? products
+        : products.filter(product => product.category === selectedCategory);
+
+      renderProducts(filteredProducts);
+    }
+
+    function sortProducts() {
+      const popularitySort = document.getElementById('popularitySort');
+      const sortOrder = popularitySort.value;
+
+      const sortedProducts = [...products];
+
+      if (sortOrder === 'popularity') {
+        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+      }
+
+      renderProducts(sortedProducts);
+    }
+
+    function showProductDetails(productId) {
+      const selectedProduct = products.find(product => product.id === productId);
+      const productDetailsContainer = document.getElementById('product-details');
+      productDetailsContainer.innerHTML = `
+        <div class="details-container">
+          <h2>${selectedProduct.name}</h2>
+          <p>${selectedProduct.description}</p>
+          <p>$${selectedProduct.price}</p>
+          <div class="customization-options">
+            <!-- Add customization options here -->
+          </div>
+          <a href="#" class="add-to-cart-btn" onclick="addToCart(${selectedProduct.id})">Add to Cart</a>
+        </div>
+      `;
+      productDetailsContainer.style.display = 'block';
+    }
+
+    function addToCart(productId) {
+      const selectedProduct = products.find(product => product.id === productId);
+      cart.push(selectedProduct);
+      updateCart();
+      alert(`Product added to cart! Product ID: ${productId}`);
+    }
+
+    function updateCart() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      cartItemsContainer.innerHTML = '';
+
+      cart.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+          <div>${item.name}</div>
+          <div>$${item.price}</div>
+          <button class="remove-item-btn" onclick="removeFromCart(${item.id})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+      });
+    }
+
+    function removeFromCart(productId) {
+      const itemIndex = cart.findIndex(item => item.id === productId);
+      if (itemIndex !== -1) {
+        cart.splice(itemIndex, 1);
+        updateCart();
+      }
+    }
+
+    function toggleCart() {
+      const cartContent = document.getElementById('cart-content');
+      cartContent.style.display = cartContent.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Initial rendering
+    renderProducts(products);
+  </script>
+
+
+
+
+
+
+
+
+
+  
+
+					        
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+         
+
+<div class="col-md-6 col-lg-3">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">location info</h2>
+<img src="https://gos3.ibcdn.com/marker_3036729908262636434_mobile_1653513013.jpg" alt="Small Image in Corner" style="width: 250px; height: auto;">
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Open Hours</h2>
+              <ul class="list-unstyled open-hours">
+                <li class="d-flex"><span>Monday</span><span>9:00 - 24:00</span></li>
+                <li class="d-flex"><span>Tuesday</span><span>9:00 - 24:00</span></li>
+                <li class="d-flex"><span>Wednesday</span><span>9:00 - 24:00</span></li>
+                <li class="d-flex"><span>Thursday</span><span>9:00 - 24:00</span></li>
+                <li class="d-flex"><span>Friday</span><span>9:00 - 02:00</span></li>
+                <li class="d-flex"><span>Saturday</span><span>9:00 - 02:00</span></li>
+                <li class="d-flex"><span>Sunday</span><span> 9:00 - 02:00</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Our logo</h2>
+<img src="file:///C:/Users/Rashidha/Downloads/web%20assignment%20CA/21it0500/images/icon1" alt="Small Image in Corner" style="width: 250px; height: auto;">
+            </div>
+</div>
+          
+        <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Rashi</h2>
+              <p>Nestled within the spectacular landscapes of Yala National Park, our resort is surrounded by lush greenery and the natural beauty of Yala National Park..</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>          </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+
+
+
+
+
+
+
+
+
+
+
+           
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
